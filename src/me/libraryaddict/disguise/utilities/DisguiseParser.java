@@ -746,6 +746,12 @@ public class DisguiseParser {
                             catch (Exception ex) {
                                 throw parseToException("llama color", valueString, methodName);
                             }
+                        }else if(param == Parrot.Variant.class){
+                            try{
+                                value = Parrot.Variant.valueOf(valueString.toUpperCase());
+                            }catch (Exception ex){
+                                throw parseToException("parrot variant", valueString, methodName);
+                            }
                         } else if (param == ItemStack.class) {
                             // Parse to itemstack
                             try {

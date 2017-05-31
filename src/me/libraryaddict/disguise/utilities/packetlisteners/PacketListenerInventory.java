@@ -256,9 +256,9 @@ public class PacketListenerInventory extends PacketAdapter {
         // If the server is setting the slot
         // Need to set it to air if its in a place it shouldn't be.
         // Things such as picking up a item, spawned in item. Plugin sets the item. etc. Will fire this
-        /**
-         * Done
-         */
+        //
+        // Done
+        //
         if (event.getPacketType() == Server.SET_SLOT) {
             // The raw slot
             // nms code has the start of the hotbar being 36.

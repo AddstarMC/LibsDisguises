@@ -72,7 +72,7 @@ public abstract class Disguise {
     /**
      * Seems I do this method so I can make cleaner constructors on disguises..
      *
-     * @param newType The disguise
+     *            The disguise
      */
     protected void createDisguise() {
         if (getType().getEntityType() == null) {
@@ -311,20 +311,19 @@ public abstract class Disguise {
                                         }
 
                                         mods.write(0, DisguiseAPI.getSelfDisguiseId());
-                                    } else {
+                                    }
+                                    else {
                                         mods.write(0, getEntity().getEntityId());
                                     }
 
-                                    mods.write(2,
-                                            (int) (8000D * (vectorY * ReflectionManager.getPing(player)) * 0.069D));
+                                    mods.write(2, (int) (8000D * (vectorY * ReflectionManager.getPing(player)) * 0.069D));
 
                                     if (lookPacket != null && player != getEntity()) {
-                                        ProtocolLibrary.getProtocolManager().sendServerPacket(player, lookPacket,
-                                                false);
+                                        ProtocolLibrary.getProtocolManager().sendServerPacket(player, lookPacket, false);
                                     }
 
-                                    ProtocolLibrary.getProtocolManager().sendServerPacket(player,
-                                            velocityPacket.shallowClone(), false);
+                                    ProtocolLibrary.getProtocolManager().sendServerPacket(player, velocityPacket.shallowClone(),
+                                            false);
                                 }
                             }
                             catch (Exception e) {

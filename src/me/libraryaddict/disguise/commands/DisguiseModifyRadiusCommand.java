@@ -51,6 +51,7 @@ public class DisguiseModifyRadiusCommand extends DisguiseBaseCommand implements 
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender.getName().equals("CONSOLE")) {
             sender.sendMessage(ChatColor.RED + "You may not use this command from the console!");
@@ -246,9 +247,7 @@ public class DisguiseModifyRadiusCommand extends DisguiseBaseCommand implements 
             DisguiseType disguiseType = disguise.getType();
 
             for (Method method : ReflectionFlagWatchers.getDisguiseWatcherMethods(disguiseType.getWatcherClass())) {
-                for (int i = 0; i < args.length; i++) {
-                    String arg = args[i];
-
+                for (String arg : args) {
                     if (!method.getName().equalsIgnoreCase(arg))
                         continue;
 

@@ -1,11 +1,9 @@
 package me.libraryaddict.disguise.commands;
 
-import com.comphenix.protocol.wrappers.WrappedGameProfile;
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.DisguiseConfig;
 import me.libraryaddict.disguise.disguisetypes.Disguise;
 import me.libraryaddict.disguise.disguisetypes.DisguiseType;
-import me.libraryaddict.disguise.disguisetypes.PlayerDisguise;
 import me.libraryaddict.disguise.disguisetypes.watchers.LivingWatcher;
 import me.libraryaddict.disguise.utilities.DisguiseParser;
 import me.libraryaddict.disguise.utilities.DisguiseParser.DisguiseParseException;
